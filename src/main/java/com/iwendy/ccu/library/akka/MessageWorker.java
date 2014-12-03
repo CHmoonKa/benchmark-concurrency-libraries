@@ -1,4 +1,4 @@
-package com.samsung.svoice.ccu.library.akka;
+package com.iwendy.ccu.library.akka;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

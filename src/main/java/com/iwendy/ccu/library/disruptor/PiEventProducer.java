@@ -1,7 +1,7 @@
-package com.samsung.svoice.ccu.library.disruptor;
+package com.iwendy.ccu.library.disruptor;
 
+import com.iwendy.ccu.library.PiJob;
 import com.lmax.disruptor.RingBuffer;
-import com.samsung.svoice.ccu.library.PiJob;
 
 public class PiEventProducer {
   private final RingBuffer<PiJob> ringBuffer;

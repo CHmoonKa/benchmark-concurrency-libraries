@@ -1,9 +1,9 @@
-package com.samsung.svoice.ccu.library;
+package com.iwendy.ccu.library;
 
-import com.samsung.svoice.ccu.library.akka.AkkaScenario;
-import com.samsung.svoice.ccu.library.disruptor.DisruptorScenario;
-import com.samsung.svoice.ccu.library.forkjoin.FJScenario;
-import com.samsung.svoice.ccu.library.thread.ThreadScenario;
+import com.iwendy.ccu.library.akka.AkkaScenario;
+import com.iwendy.ccu.library.disruptor.DisruptorScenario;
+import com.iwendy.ccu.library.forkjoin.FJScenario;
+import com.iwendy.ccu.library.thread.ThreadScenario;
 
 public class Benchmark {
 

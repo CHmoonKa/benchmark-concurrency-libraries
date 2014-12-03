@@ -1,9 +1,9 @@
-package com.samsung.svoice.ccu.library.forkjoin;
+package com.iwendy.ccu.library.forkjoin;
 
 import java.util.concurrent.RecursiveAction;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import com.samsung.svoice.ccu.library.PiJob;
+import com.iwendy.ccu.library.PiJob;
 
 public class PiTask extends RecursiveAction{
   private static final long serialVersionUID = 1L;

@@ -1,4 +1,4 @@
-package com.samsung.svoice.ccu.library.akka;
+package com.iwendy.ccu.library.akka;
 
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.LockSupport;
@@ -8,7 +8,7 @@ import akka.actor.ActorSystem;
 import akka.actor.Props;
 import akka.routing.RoundRobinRouter;
 
-import com.samsung.svoice.ccu.library.IScenario;
+import com.iwendy.ccu.library.IScenario;
 
 public class AkkaScenario implements IScenario{
   int coreNum = Runtime.getRuntime().availableProcessors();

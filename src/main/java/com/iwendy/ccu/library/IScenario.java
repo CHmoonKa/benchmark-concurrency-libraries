@@ -1,4 +1,4 @@
-package com.samsung.svoice.ccu.library;
+package com.iwendy.ccu.library;
 
 public interface IScenario {
 

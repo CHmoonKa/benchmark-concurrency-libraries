@@ -1,15 +1,13 @@
-package com.samsung.svoice.ccu.library.thread;
+package com.iwendy.ccu.library.forkjoin;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.LockSupport;
 
-import com.samsung.svoice.ccu.library.IScenario;
-import com.samsung.svoice.ccu.library.PiJob;
+import com.iwendy.ccu.library.IScenario;
 
-public class ThreadScenario implements IScenario{
+public class FJScenario implements IScenario {
   int coreNum = Runtime.getRuntime().availableProcessors();
   
   @Override
@@ -33,35 +31,29 @@ public class ThreadScenario implements IScenario{
     this.coreNum = core;
   }
   
-  private long run(final int jobNum, final int iterNum) {
-    final ExecutorService test = Executors.newFixedThreadPool(coreNum);
+  public long run(final int jobNum, final int iterNum) {
+    ForkJoinPool fjp = new ForkJoinPool(
+      coreNum,       //the parallelism level(such as thread number)
+      ForkJoinPool.defaultForkJoinWorkerThreadFactory, //the factory for creating new threads. 
+      null,          //the handler for internal worker threads
+      true           // asyncMode for fork/join
+    );
     
     final AtomicInteger latch = new AtomicInteger(jobNum);
     final long start = System.currentTimeMillis();
     
     for ( int i= 0; i< jobNum; i++) {
-      final int fi = i;
-        test.submit(new Runnable() {
-            public void run() {
-                PiJob pj = new PiJob(fi, iterNum);
-                double res = 0.0D;
-                do{
-                  res = pj.calculatePi();
-                }while(res <= 0.0D);
-                
-                latch.decrementAndGet();
-            }
-        });
+      PiTask pt = new PiTask(i, iterNum, latch);
+      fjp.submit(pt);
     }
     while (latch.get() > 0 ) {
         LockSupport.parkNanos(100*500);
     }
     long end = System.currentTimeMillis();
-    test.shutdownNow();
+    fjp.shutdownNow();
     try {
-      test.awaitTermination(10, TimeUnit.SECONDS);
+      fjp.awaitTermination(10, TimeUnit.SECONDS);
     } catch (InterruptedException e) {
-      
     }
     return end - start;
   }

@@ -1,9 +1,9 @@
-package com.samsung.svoice.ccu.library.disruptor;
+package com.iwendy.ccu.library.disruptor;
 
 import java.util.concurrent.CountDownLatch;
 
+import com.iwendy.ccu.library.PiJob;
 import com.lmax.disruptor.EventHandler;
-import com.samsung.svoice.ccu.library.PiJob;
 
 public class PiResultHandler implements EventHandler<PiJob>{
   public long seq = 0;

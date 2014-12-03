@@ -1,7 +1,7 @@
-package com.samsung.svoice.ccu.library.disruptor;
+package com.iwendy.ccu.library.disruptor;
 
+import com.iwendy.ccu.library.PiJob;
 import com.lmax.disruptor.EventTranslatorTwoArg;
-import com.samsung.svoice.ccu.library.PiJob;
 
 public class PiEventTranslator implements EventTranslatorTwoArg<PiJob, Integer, Integer>{
 

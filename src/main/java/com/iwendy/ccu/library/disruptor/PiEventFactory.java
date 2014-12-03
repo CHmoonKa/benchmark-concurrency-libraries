@@ -1,7 +1,7 @@
-package com.samsung.svoice.ccu.library.disruptor;
+package com.iwendy.ccu.library.disruptor;
 
+import com.iwendy.ccu.library.PiJob;
 import com.lmax.disruptor.EventFactory;
-import com.samsung.svoice.ccu.library.PiJob;
 
 public class PiEventFactory implements EventFactory<PiJob>
 {

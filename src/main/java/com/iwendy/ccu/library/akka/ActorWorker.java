@@ -1,6 +1,6 @@
-package com.samsung.svoice.ccu.library.akka;
+package com.iwendy.ccu.library.akka;
 
-import com.samsung.svoice.ccu.library.PiJob;
+import com.iwendy.ccu.library.PiJob;
 
 import akka.actor.UntypedActor;
 

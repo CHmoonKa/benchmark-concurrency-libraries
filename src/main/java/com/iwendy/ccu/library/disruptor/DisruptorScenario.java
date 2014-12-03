@@ -1,4 +1,4 @@
-package com.samsung.svoice.ccu.library.disruptor;
+package com.iwendy.ccu.library.disruptor;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -6,12 +6,12 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.LockSupport;
 
+import com.iwendy.ccu.library.IScenario;
+import com.iwendy.ccu.library.PiJob;
 import com.lmax.disruptor.RingBuffer;
 import com.lmax.disruptor.SleepingWaitStrategy;
 import com.lmax.disruptor.dsl.Disruptor;
 import com.lmax.disruptor.dsl.ProducerType;
-import com.samsung.svoice.ccu.library.PiJob;
-import com.samsung.svoice.ccu.library.IScenario;
 
 public class DisruptorScenario implements IScenario{
   int coreNum = Runtime.getRuntime().availableProcessors();

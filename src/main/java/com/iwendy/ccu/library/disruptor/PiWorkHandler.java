@@ -1,9 +1,9 @@
-package com.samsung.svoice.ccu.library.disruptor;
+package com.iwendy.ccu.library.disruptor;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
+import com.iwendy.ccu.library.PiJob;
 import com.lmax.disruptor.WorkHandler;
-import com.samsung.svoice.ccu.library.PiJob;
 
 public class PiWorkHandler implements WorkHandler<PiJob> {
   public final AtomicInteger latch;
