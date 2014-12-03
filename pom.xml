@@ -2,7 +2,7 @@
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.samsung.svoice</groupId>
+	<groupId>com.iwendy</groupId>
 	<artifactId>benchmark-concurrency-library</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>benchmark concurrency library</name>
@@ -39,7 +39,7 @@
                     <archive> 
                         <manifest> 
                             <addClasspath>true</addClasspath> 
-                            <mainClass>com.samsung.svoice.ccu.library.Benchmark</mainClass> 
+                            <mainClass>com.iwendy.ccu.library.Benchmark</mainClass> 
                         </manifest> 
                     </archive> 
                     <descriptorRefs> 
