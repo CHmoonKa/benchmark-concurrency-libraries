@@ -4,10 +4,10 @@ benchmark-concurrency-libraries
 In order to make use of modern multi core/socket hardware, Java offers threads and locks for concurrent programming.
 
 But, it is well known that this model suffers of a number of problems:
-*Deadlocks
-*Bad scaling due to "over-synchronization" or contention on common resources
-*Errors caused by invalid synchronization are timing dependent and hard to reproduce. It is common they appear under special conditions (load, hardware) in production.
-*As a software project grows, it gets hard to safely modify the application.
+*Deadlocks*
+*Bad scaling due to "over-synchronization" or contention on common resources*
+*Errors caused by invalid synchronization are timing dependent and hard to reproduce. It is common they appear under special conditions (load, hardware) in production.*
+*As a software project grows, it gets hard to safely modify the application.*
 
 So there are some alternative models to express concurrency: Actors and Disruptor.
 ###Actors
