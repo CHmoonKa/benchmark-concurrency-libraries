@@ -13,6 +13,8 @@ So there are some alternative models to express concurrency: Actors and Disrupto
 #### Actors
 An Actor is like an object instance executed by a single thread. Threads cooperating by sending messages to each other who has it’s own message queue.
 
+Like a queue, the purpose of the Disruptor is to move data (such as messages or events) between threads within the same process.
+
 #### Disruptor
 The disruptor is a bounded queue where producers add to the head of the queue (if slots are available, else the producer is blocked). Consumers access the queue at different points, so each consumer has its own read position (cursor) inside the queue. 
 
