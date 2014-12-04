@@ -36,5 +36,4 @@ The disruptor is a bounded queue where producers add to the head of the queue (i
 ## Result
 ![images](https://github.com/CHmoonKa/benchmark-concurrency-libraries/blob/master/images/100k_jobs_1000_iter.png)
 
-
-
+![images](https://github.com/CHmoonKa/benchmark-concurrency-libraries/blob/master/images/1Million_jobs_100_iter.png)
