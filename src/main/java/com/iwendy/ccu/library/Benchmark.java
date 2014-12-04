@@ -7,17 +7,12 @@ import com.iwendy.ccu.library.thread.ThreadScenario;
 
 public class Benchmark {
 
-  /**
-   * @param args[] = {type, test scenario, maybe core num}
-   * @param type = {1:disruptor, 2:akka, 3:fork/join, 4:thread}
-   * @param scenario = {1:bm_1kiterator_10kJob, 2:bm_100iterator_100kJob}
-   */
   public static void main(String[] args) {
     // for benchmark
-    //bm(args);
+    bm(args);
     
-    // for test
-    test2();
+    // uncomment to run in IDE
+    // test2();
   }
   
   static void test1(){
